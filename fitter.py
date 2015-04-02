@@ -42,7 +42,7 @@ def grabData():
 
 
 #  ------------------------------------------------------
-# Given list of x return list of h0*x
+# Step 3: Given list of x return list of h0*x
 def hubble(x,h0):
     return 0.
 
@@ -52,46 +52,47 @@ def hubble(x,h0):
 #     by calculating the sum of the square of
 #     the residuals
 #
+
+#Step 5:
 def SSR(x,y,h0):
 
 
 #
-#  Get data, plot it
+#  Step 2: Get data, plot it
 #
 
 x, y=grabData()
 
-#   Plot example function
+#   Step 4: Plot example function
 #
 
 
 #
-#  Find SSR for poor fit from example function
+#  Step 6: Find SSR for poor fit from example function
 #
 
 
 #
-#   Make lists for possible slopes and
-#              intercepts, then print them
+#   list for possible slopes. 
 #
 
 h0s=np.arange(0.,100.,0.1)
 
 #
-#  Find slope and intercept that minimize
+#  Step 7: Find slope and intercept that minimize
 #              the RSS
 #
 bestSlope = 0.
 min_ssr = np.inf
 
 #
-#   Plot Result
+#   Step 8: Plot Result
 #
 #
 
 
 #
-#   Plot Residuals
+#   Step 9: Plot Residuals
 #
 #
 
