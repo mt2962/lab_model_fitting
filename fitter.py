@@ -42,9 +42,7 @@ def grabData():
 
 
 #  ------------------------------------------------------
-#  F
-#    Given data list x, returns a list y = mx+b 
-#
+# Given list of x return list of h0*x
 def hubble(x,h0):
     return 0.# FIXME!
 
@@ -52,7 +50,7 @@ def hubble(x,h0):
 #   SSR
 # 
 #     Given data lists x and y, this function
-#     finds how well a line, f(x) = mx+b fits
+#     finds how well a line, hubble(x) = h0*x fits
 #     by calculating the sum of the square of
 #     the residuals
 #
