@@ -82,7 +82,7 @@ h0s=np.arange(0.,100.,0.1)
 #  Step 7: Find slope and intercept that minimize
 #              the RSS
 #
-bestSlope = 0.
+best_h0 = 0.
 min_ssr = np.inf
 
 #
