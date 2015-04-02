@@ -44,11 +44,9 @@ def grabData():
 #  ------------------------------------------------------
 # Given list of x return list of h0*x
 def hubble(x,h0):
-    return 0.# FIXME!
+    return 0.
 
-#
-#   SSR
-# 
+
 #     Given data lists x and y, this function
 #     finds how well a line, hubble(x) = h0*x fits
 #     by calculating the sum of the square of
@@ -58,42 +56,42 @@ def SSR(x,y,h0):
 
 
 #
-#  STEP 3 ---- Get data, plot it
+#  Get data, plot it
 #
 
 x, y=grabData()
 
-#  STEP 5 ---- Plot example function
+#   Plot example function
 #
 
 
 #
-#  STEP 7 ---- Find SSR for poor fit from example function
+#  Find SSR for poor fit from example function
 #
 
 
 #
-#  STEP 8 ---- Make lists for possible slopes and
+#   Make lists for possible slopes and
 #              intercepts, then print them
 #
 
 h0s=np.arange(0.,100.,0.1)
 
 #
-#  STEP 9 ---- Find slope and intercept that minimize
+#  Find slope and intercept that minimize
 #              the RSS
 #
 bestSlope = 0.
 min_ssr = np.inf
 
 #
-#  STEP 10 ---- Plot Result
+#   Plot Result
 #
 #
 
 
 #
-#  STEP 11 ---- Plot Residuals
+#   Plot Residuals
 #
 #
 
