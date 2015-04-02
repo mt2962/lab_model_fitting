@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 #  ------------------------------------------------------
@@ -27,22 +28,12 @@ def plotFit(x,y,z,name):
 #    Pulls data from file and stores it in x,y
 #
 def grabData():
-	f = open('linFit.dat','r')
-		
-	dataString = f.read()
-	f.close()
-	dataLines = dataString.split('\n');
-	N = len(dataLines)-1
-	x = []
-	y = []
-
-	for i in range(N):
-		line = dataLines[i].split('\t')
-		x.append(float( line[0] ))
-		y.append(float( line[1] ))
+	dat=np.genfromtxt('linfit.txt')
+	x=dat[:,0]
+	y=dat[:,1]
 
 	return (x,y)
-	
+
 
 
 #  ------------------------------------------------------
@@ -81,9 +72,9 @@ def SSR(x,y,m,b):
 #              intercepts, then print them
 #
 
-slopes = []
-for i in range(-50,50):
-	slopes.append( i/10.0 )
+slopes=np.arange(0.,100.,1.)
+bs=np.arange(0.,100.,1.)    
+
 
 #
 #  STEP 9 ---- Find slope and intercept that minimize
@@ -91,7 +82,8 @@ for i in range(-50,50):
 #
 bestSlope = 0
 bestInter = 0
-minSSR = 10000
+min_ssr = np.inf
+
 
 #
 #  STEP 10 ---- Plot Result
